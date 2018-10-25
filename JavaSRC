@@ -1,0 +1,26 @@
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.Scanner;
+
+public class browse {
+
+ 
+ public static void main(String[] args) throws URISyntaxException, IOException  {
+  
+Scanner sc = new Scanner (System.in);	
+String URL = null;
+   
+URL = sc.next();
+String URLFinal = "http://" + URL;	 
+
+URI uri= new URI(URLFinal);
+	   
+	   java.awt.Desktop.getDesktop().browse(uri);
+	   System.out.println("Navigating to webpage...");
+ 
+
+ }
+
+}
